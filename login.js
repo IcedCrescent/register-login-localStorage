@@ -1,3 +1,9 @@
+let curentUser = localStorage.getItem("currentUser");
+if (curentUser) {
+    alert("You are already logged in");
+    // location.href = "./home.html";
+}
+
 /**
  * The login form, containing username, password and remember checkbox
  * @type {HTMLFormElement}
@@ -39,6 +45,7 @@ loginForm.onsubmit = function (e) {
         if (loginForm.remember.checked) {
             localStorage.setItem("remember", "true");
         }
+        // localStorage.setItem("curentUser", user);
         // location.href = "./home.html";
     }   
 }
